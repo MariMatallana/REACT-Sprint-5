@@ -1,8 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.hello = void 0;
-const world = 'world';
-function hello(who = world) {
-    return `Hello ${who}! `;
+function start() {
+    const joke = fetch('https://icanhazdadjoke.com/')
+        .then(res => res.json())
+        .then(answer => {
+        console.log(joke);
+        console.log(answer);
+    });
 }
-exports.hello = hello;

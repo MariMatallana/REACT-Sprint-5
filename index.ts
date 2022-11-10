@@ -1,6 +1,9 @@
-const world = 'world';
 
-
-export function hello(who: string = world): string {
-  return `Hello ${who}! `;
+function start() {
+  const joke = fetch('https://icanhazdadjoke.com/')
+  .then(res => res.json())
+  .then(answer => {
+    console.log(joke)
+      console.log(answer)
+  });
 }
