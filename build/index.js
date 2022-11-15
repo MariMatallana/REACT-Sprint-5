@@ -1,9 +1,7 @@
 "use strict";
+const url = 'https://icanhazdadjoke.com/slack';
 function start() {
-    const joke = fetch('https://icanhazdadjoke.com/')
+    fetch(url)
         .then(res => res.json())
-        .then(answer => {
-        console.log(joke);
-        console.log(answer);
-    });
+        .then((data) => console.log(data));
 }
