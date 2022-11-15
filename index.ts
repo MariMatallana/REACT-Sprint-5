@@ -1,10 +1,19 @@
-const url = 'https://icanhazdadjoke.com/slack'
+const but: any = document.querySelector('button');
+const parrafo: any = document.querySelector('h4')
+but.addEventListener('click', getData)
 
-function start() {
-  fetch(url)
-    .then(res => res.json())
-    .then((data) => console.log(data));
-  
-}
+  async function getData() {
+    try { 
+    const data = await fetch('https://icanhazdadjoke.com/slack')
+    const json = await data.json(); 
+    console.log(json);
+    console.log(json.fallback, json.username)
+    parrafo.textContent =  8
+   }
+
+    catch(e) {
+      console.error(e);
+   }
+  }
 
 
