@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const but = document.querySelector('button');
+const but = document.querySelector('input');
 const parrafo = document.querySelector('p');
 but.addEventListener('click', getData);
 function getData() {
@@ -16,12 +16,32 @@ function getData() {
         try {
             const data = yield fetch('https://icanhazdadjoke.com/slack');
             const json = yield data.json();
-            console.log(json);
-            console.log(json.attachments);
+            //console.log(json);
+            // console.log(json.attachments)
             parrafo.textContent = json.attachments[0].fallback;
+            //console.log(parrafo.textContent)
         }
         catch (e) {
             console.error('newError', e);
         }
     });
+}
+const reportAcudits = [];
+function puntuation1() {
+    const day = new Date();
+    let text = day.toISOString();
+    reportAcudits.push({ puntuation: "1", joke: parrafo.textContent, date: text });
+    console.log(reportAcudits);
+}
+function puntuation2() {
+    const day = new Date();
+    let text = day.toISOString();
+    reportAcudits.push({ puntuation: "2", joke: parrafo.textContent, date: text });
+    console.log(reportAcudits);
+}
+function puntuation3() {
+    const day = new Date();
+    let text = day.toISOString();
+    reportAcudits.push({ puntuation: "3", joke: parrafo.textContent, date: text });
+    console.log(reportAcudits);
 }

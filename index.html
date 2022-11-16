@@ -8,18 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+   
     <div class="container mt-4" >
-
-        <div class="row align-items-center">
-            <div class="col-12"></div>
-                <img src="Imagen.jpg" class="img-fluid" alt="...">
-                <div> 
-                    <div class="card position-absolute top-50 start-50 translate-middle" style="width: 500px; height: 180px;">
-                        <div class="card-body ">
-                            <h3 class="card-title text-center mb-3">¿Preparado para reir? &#128514</h3> 
-                            <p class="text-center mb-5"></p>
-                            <button type="button" class="btn mt-5 btn-warning position-absolute top-50 start-50 translate-middle">Siguiente Chiste</button>
+        <div class="row align-items-center mx-0">
+            <h4></h4>
+            <div class="card border-white">
+                <img src="Imagen.jpg" class="card-img" >
+                <div class="card col-10 col-md-6 position-absolute bottom-0 start-50 mb-3 translate-middle-x" style="background-color: rgba(245, 245, 245, 0.8);">
+                    <div class="card-body align-items-center ">
+                        <h5 class="card-title text-center mb-3 ">¿Preparado para reir? &#128514</h5> 
+                        <p class="text-center mb-1"></p>    
+                        <div class="text-center mb-2">
+                            <button class="btn btn-default" onclick="puntuation1(parrafo.textContent)">
+                                <img src="/Cara-Feliz.png" width="30" />
+                            </button>
+                            <button class="btn btn-default" onclick="puntuation2(parrafo.textContent)">
+                                <img src="/Cara-Neutra.png" width="30" />
+                            </button>
+                            <button class="btn btn-default" onclick="puntuation3(parrafo.textContent)">
+                                <img src="/Cara-Triste.png" width="30" />
+                            </button>
                         </div>
+                        <input type="button" class="btn d-grid gap-2 col-6  px-1 mx-auto btn-warning" value="Siguiente chiste"></input>
                     </div>
                 </div>
             </div>
